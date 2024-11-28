@@ -1,0 +1,223 @@
+<!DOCTYPE html >
+<!--  Website template by freewebsitetemplates.com  -->
+<html>
+
+<head>
+	
+	<title>TAYLOR SWIFT</title>
+	<meta  charset="iso-8859-1" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<!--[if IE 6]>
+		<link href="css/ie6.css" rel="stylesheet" type="text/css" />
+	<![endif]-->
+	<!--[if IE 7]>
+        <link href="css/ie7.css" rel="stylesheet" type="text/css" />  
+	<![endif]-->
+
+</head>
+
+<style>
+
+page{
+	  width:950px;
+	  margin:0;
+	  padding:0;
+	}
+	
+header{
+		 padding-bottom: 0;
+	}
+
+ header .footer .body{
+	      background-image:url('../images/bg-page.jpg');  
+		  width:970px;
+		  height:650px;
+		  overflow:hidden; 
+	}	
+  
+  body {
+    margin:0;
+    overflow: hidden;
+  }
+
+  canvas {
+    position:absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+ page .header .footer .body #sidebar{
+		   width:210px;
+		   float:left;
+  }
+  
+  .button-container {
+      position: absolute;
+      top: 20px; /* Adjust to position the button vertically */
+      left: 680px; /* Adjust to position the button horizontally */
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+	  font-style:Century Gothic;
+      color: black;
+      background-color: #f4f0ec;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: background-color #a9a9a9;
+    }
+    .button:hover {
+      background-color: #a9a9a9;
+    }
+ 
+</style>
+
+<!-- Confetti Canvas -->
+<canvas id="confetti"></canvas>
+
+<!-- Confetti Script -->
+<script>
+  const canvas = document.getElementById('confetti');
+  const ctx = canvas.getContext('2d');
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const particles = [];
+  const colors = ['#d3d3d3', '#a9a9a9', '#808080', '#c0c0c0', '#f0f0f0']; // Shades of gray and white
+
+  // Create a particle
+  function createParticle(x, y) {
+    particles.push({
+      x: x,
+      y: y,
+      size: Math.random() * 10 + 5,
+      speedX: Math.random() * 6 - 3,
+      speedY: Math.random() * -3 - 3,
+      color: colors[Math.floor(Math.random() * colors.length)],
+      alpha: 1,
+    });
+  }
+
+  // Animate the confetti
+  function animateConfetti() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    particles.forEach((particle, index) => {
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = particle.color;
+      ctx.globalAlpha = particle.alpha;
+      ctx.fill();
+
+      particle.x += particle.speedX;
+      particle.y += particle.speedY;
+      particle.alpha *= 0.99;
+      particle.size *= 0.98;
+
+      if (particle.alpha <= 0.05 || particle.size <= 0.5) {
+        particles.splice(index, 1);
+      }
+    });
+
+    requestAnimationFrame(animateConfetti);
+  }
+
+  // Trigger confetti on page load
+  window.onload = () => {
+    for (let i = 0; i < 300; i++) {
+      createParticle(Math.random() * canvas.width, Math.random() * canvas.height);
+    }
+    animateConfetti();
+  };
+</script>
+
+
+
+<body>
+	<script>
+		window.alert("Welcome to my Website in IT, Professor Fatih!")
+	</script>
+	
+	<div class="background">
+    <div class="button-container">
+	
+	<style>
+															button {
+															padding: 10px 50px;
+															font-size: 19px;
+															font-style: Century Gothic;
+															background-color: #f4f0ec ; 
+															color: black;
+															border: none;
+															border-radius: 2px;
+															cursor: pointer;
+															float:right;
+															}
+															button:hover {
+															background-color: #a9a9a9; 
+																}
+														</style>
+      
+	  <button onclick="redirectToGoogle()">Click Here to Visit Taylor's Offical Website!</button>
+
+														<script>
+														function redirectToGoogle() {
+														window.location.href = "https://www.taylorswift.com/";
+															}
+														</script>
+				
+    </div>
+  </div>
+	  <div id="background">
+			  <div id="page">
+			
+					 <div class="header">
+						<div class="footer">
+							<div class="body">
+							  
+									<div id="sidebar">
+									    <a href="index.html"><img id="logo" src="images/ttpd.png" width="180" height="150" alt="" title=""/></a>
+									
+										
+										<ul class="navigation">
+										    <li class="active" ><a href="index.html">HOME</a></li>
+											<li><a href="about.html">ABOUT</a></li>
+											<li><a href="blog.html">THE TTPD ALBUM</a></li>
+											<li class="last" ><a href="contact.html">THE ERAS TOUR</a></li>
+										</ul>
+										
+										<div class="connect">
+										    <a href="https://www.facebook.com/TaylorSwift/" class="facebook">&nbsp;</a>
+											<a href="https://x.com/taylorswift13?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="twitter">&nbsp;</a>
+											<a href="https://www.youtube.com/@TaylorSwift" class="vimeo">&nbsp;</a>
+										</div>
+										<div class="footenote"> <span>DICKSEN TRISHA PAULINO [23319034]</span> <span>&copy; Fall 2024 &copy;</span> <span>Introduction to Informatics and Computing</span> <span><a href="index.html"></span></div>
+										</div
+									</div>
+									<div id="content" >
+								
+										
+									    <img src="images/backback.jpg" 
+											style="width:102%; height:200%; object-fit:cover; ">
+										<div class="featured">
+										      <div class="header">
+											    
+											  </div>
+											  
+											  
+											  
+											  <div class="body">
+											    
+											  </div>
+									    </div>
+									</div>
+						</div>
+					 </div>
+					 <div class="shadow">&nbsp;</div>
+			  </div>    
+	  </div>    
+	
+</body>
+</html>
